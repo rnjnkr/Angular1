@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app = "clockApp">
+    <title> Clock App</title>
+    <head>
+         <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <h1>Clock App</h1>
+        <p>Simple utility to check current time </p>
+        <script src = ../angular.js></script>
+        <script src = clock.js></script>
+    </head>
+    <body>
+        <div ng-controller = "ClockCtrlr">
+            <p ng-if = "hourOfDay <= 12">Good Morning</p>
+            <p ng-if = "hourOfDay > 12">Good Afternoon</p>
+            <p>The time of day is {{currentTime}}</p>
+            <button type="button" class="btn btn-dark" ng-click = fetchCurrentTime()>Update time</button>
+        </div>
+    </body>
+</html>

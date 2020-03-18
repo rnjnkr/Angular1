@@ -1,0 +1,24 @@
+<html ng-app="nestedControllers">
+    <title>
+        Nested controllers in AngularJS
+    </title>
+    <head>
+        <script src="../angular.js"></script>
+        <script src="app.js"></script>
+        <H1>Nested controllers in AngularJS</H1>
+    </head>
+    <body>
+        <!-- <div ng-controller="Controller1">
+            <p ng-bind="testProperty"></p>
+            <div ng-controller="Controller2">
+                <p ng-bind="testProperty"></p>
+            </div>
+        </div> -->
+        <div ng-controller="Controller1 as c1">
+            <p ng-bind="c1.testProperty"></p>
+            <div ng-controller="Controller2 as c2">
+                <p ng-bind="c2.testProperty"></p>
+            </div>
+        </div>
+    </body>
+</html>

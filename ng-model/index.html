@@ -1,0 +1,20 @@
+<html ng-app="ng-models-app">
+    <title>
+        Angular ng-models Example
+    </title>
+    <head>
+        <link rel="stylesheet" href="textbox.css">
+        <script src="../angular.js"></script>
+        <script src="app.js"></script>
+        <h1>ng-models Examples</h1>
+    </head>
+    <body>
+        <div ng-controller = "ngModelController">
+            <p>Textbox: <input type="text" class="textbox" ng-model="enteredText" placeholder="Please enter some text"></p>
+            <p>Checkbox: <input type="checkbox" ng-model="isChecked"></input></p>
+            <br>
+            <p>Text you entered: {{enteredText}}</p>
+            <p>Checkbox value: {{isChecked}}</p>
+        </div>
+    </body>
+</html>

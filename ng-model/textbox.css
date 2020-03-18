@@ -1,0 +1,9 @@
+.textbox{
+    height: 20px;
+    position: relative;
+    border: 0px solid #cdcdcd;
+    border-radius: 3%;
+    border-color: rgba(0, 0, 0, .14);
+    background-color: rgb(78, 78, 78);
+    font-size: 18px;
+}
