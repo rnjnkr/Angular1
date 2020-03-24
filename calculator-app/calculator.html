@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calculator-app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Basic Calculator App</title>
+</head>
+<body style="background-color:#1A1A1A; color:white">
+    <div style="text-align:center" ng-controller="CalculatorCtrlr">
+        <h1>Calculator App</h1>
+        <hr noshade>
+        <input type="text" class="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" ng-model="number1" placeholder="Please enter a number"></input>
+        <span ng-bind="operation"></span>
+        <input type="text" class="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" ng-model="number2" placeholder="Please enter a number"></input>
+        <button id="submit" class="btn btn-primary btn-sm" style="margin-top:-6px" ng-click="calculate()">=</button>
+        <span ng-bind="result">{{result}}</span>
+        <p style="margin-top: 8px;">
+            <span>Operations:</span>
+            <button class="btn btn-primary btn-sm" ng-click="buttonClicked('+')">+</button>
+            <button class="btn btn-primary btn-sm" ng-click="buttonClicked('-')">-</button>
+            <button class="btn btn-primary btn-sm" ng-click="buttonClicked('*')">*</button>
+            <button class="btn btn-primary btn-sm" ng-click="buttonClicked('/')">/</button>
+        </p>
+    </div>
+</body>
+</html>
